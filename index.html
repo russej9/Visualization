@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project 1</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>    
+    <!-- Add HTML content, SVG drawing area, ... -->
+
+	<h1>US Pollution</h1>
+    <div>
+        Year: <input type="number" value="1980" min="1980", max="2021" id="year-input">
+    </div>
+	<button onclick="filterDataAQI()">AQI</button>
+	
+	<button onclick="filterDataPol()">Pollutants</button>
+	<button onclick="sequence()">Play</button>
+	
+	<div class="container"id="container">
+        <!--<div class="margin-right"><svg id="lineplot"></svg></div>
+        <div><svg id="piechart"></svg></div>-->
+		<svg id="chart"></svg>
+		<svg id="barchartH"></svg>
+		<svg id="barchartP"></svg>
+		<p>Days Missing</p>
+		<svg id="chartDay"></svg>
+		<svg id="chart2"></svg>
+		<svg id="barchartH2"></svg>
+		<svg id="barchartP2"></svg>
+		<p>Days Missing</p>
+		<svg id="chartDay2"></svg>
+    </div>
+
+    <div class="source">
+        Source: US Environmental Protection Agency. Air Quality System Data Mart [internet database] available via <a href="https://www.epa.gov/outdoor-air-quality-data">https://www.epa.gov/outdoor-air-quality-data</a>
+    </div>
+	<div id='tooltip'></div>
+
+
+ 
+    <!-- D3 bundle -->
+    <script src="js/d3.v6.min.js"></script>
+
+    <!-- Our JS code - INCLUDING the new files-->
+	<script src="js/linechart.js"></script> 
+    <script src="js/main.js"></script>
+	<script src="js/barchart.js"></script>
+
+
+</body>
+</html>
